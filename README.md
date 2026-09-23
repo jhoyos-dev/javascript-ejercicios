@@ -2,7 +2,7 @@
 
 Ejercicios de lógica de programación en JavaScript realizados en el bootcamp **Desarrollo Web Full Stack** del **Ministerio TIC y Talento Tech** (2024).
 
-🔗 **Calculadora de compras en vivo:** https://jhoyos-dev.github.io/javascript-ejercicios/04-calculadora-compras/
+🔗 **Calculadora de compras en vivo:** [Abrir calculadora](https://jhoyos-dev.github.io/javascript-ejercicios/04-calculadora-compras/)
 
 ## 📂 Contenido
 
