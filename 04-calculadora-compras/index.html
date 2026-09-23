@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Compras</title>
+</head>
+<body>
+    <form id="formularioCompras">
+        <label for="numProductos">Número de productos:</label>
+        <input type="number" id="numProductos" required>
+        <button type="button" onclick="calcularTotal()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularTotal() {
+            // Obtener el número de productos del formulario
+            const numProductos = parseInt(document.getElementById('numProductos').value);
+
+            // Inicializar el total de la compra
+            let total = 0;
+
+            // Ciclo do...while para ingresar los datos de cada producto
+            let i = 1;
+            do {
+                // Solicitar la cantidad y el valor del producto
+                const cantidad = parseInt(prompt("Ingrese la cantidad del producto " + i + ":"));
+                const valorUnitario = parseFloat(prompt("Ingrese el valor unitario del producto " + i + ":"));
+
+                // Validar los datos ingresados (puedes agregar más validaciones)
+                if (isNaN(cantidad) || cantidad <= 0 || isNaN(valorUnitario) || valorUnitario <= 0) {
+                    alert("Por favor, ingrese valores numéricos positivos.");
+                    continue; // Saltar a la siguiente iteración del ciclo
+                }
+
+                // Calcular el subtotal del producto y sumarlo al total
+                const subtotal = cantidad * valorUnitario;
+                total += subtotal;
+
+                i++;
+            } while (i <= numProductos);
+
+            // Mostrar el resultado en el elemento HTML
+            document.getElementById('resultado').textContent = "El total de la compra es: $" + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
